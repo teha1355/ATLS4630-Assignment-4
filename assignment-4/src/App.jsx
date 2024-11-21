@@ -1,5 +1,4 @@
 import {ShowImageThing} from './ShowImage'
-import {ShowImageAll} from './ShowImageAll'
 import image1 from './assets/6anl6h.jpg'
 import image2 from './assets/6anliy.jpg'
 import image3 from './assets/6anm0m.jpg'
@@ -56,9 +55,17 @@ const data2= [
 
 export default function App() {
   return (
-    <div>
-      <ShowImageThing children = {data1} />
-      <ShowImageThing children = {data2} />
+    <div id="container">
+      <div id="left">
+        <h3>Click for Images!</h3>
+        <p>Only one open at a time though don't get too crazy</p>
+        <ShowImageThing children = {data1} />
+      </div>
+      <div id="right">
+        <h3>Click for Images the Sequel!</h3>
+        <p>Patience is a virtue</p>
+        <ShowImageThing children = {data2} />
+      </div>
     </div>
     
   )
